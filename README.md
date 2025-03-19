@@ -8,9 +8,16 @@ A collection of utilities for working with SQL databases.
 pip install git+https://github.com/levileachrokt/sql-utils
 ```
 
+Updating the installed repo:
+```bash
+pip install --upgrade --force-reinstall git+https://github.com/levileachrokt/sql-utils.git
+```
+
+
 ## Getting Started
 
-After installing, 
+After installing, the function ```create_sql_connection()``` will return the connection object that you can pass into other functions. Every time this function is called, it will prompt a browser window to log in.
+
 
 ## Features
 
