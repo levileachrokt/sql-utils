@@ -8,13 +8,9 @@ A collection of utilities for working with SQL databases.
 pip install git+https://github.com/levileachrokt/sql-utils
 ```
 
-Or install from source:
+## Getting Started
 
-```bash
-git clone https://github.com/rokt/sql_utils.git
-cd sql_utils
-pip install -e .
-```
+After installing, 
 
 ## Features
 
