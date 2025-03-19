@@ -72,7 +72,7 @@ def df_to_sql_table(df, table_name, schema='analytics_ny', conn=None):
 
     # drop the table to start
     print(f'Dropping table {schema}.{table_name}')
-    run_sql(f'DROP TABLE IF EXISTS  {schema}.{table_name}', conn)
+    run_sql(f'DROP TABLE IF EXISTS  {schema}.{table_name}', conn=conn)
     chunks = range(0, len(df), 1000)
 
     # split the data into chunks of 1000
