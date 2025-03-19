@@ -5,7 +5,7 @@ A collection of utilities for working with SQL databases.
 ## Installation
 
 ```bash
-pip install sql_utils
+pip install git+https://github.com/levileachrokt/sql-utils
 ```
 
 Or install from source:
