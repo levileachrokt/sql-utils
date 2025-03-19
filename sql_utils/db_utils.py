@@ -85,8 +85,6 @@ def df_to_sql_table(df, table_name, schema='analytics_ny', conn=None):
         df_chunk.to_sql(table_name, conn, schema=schema, if_exists='append', index=False, method='multi')
 
 
-def test_func_2():
-    print('test')
 
 
 # Main function to run the script
