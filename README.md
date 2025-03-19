@@ -32,9 +32,16 @@ pip install -e .
 ## Usage
 
 ```python
-from sql_utils import connect_to_db
+from sql_utils import *
 
-# Example usage will be provided as the package develops
+my_query_string = 'select count(*) from analytics_dbt.fct_transactions' # a query to run
+
+conn = create_sql_connection() # creating the initial connection - will open a browser window to log in
+
+df_query_output = run_sql(my_query_string) # get the output of my query in a pandas df 
+
+df_to_sql_table(df_query_output, conn, 'my_table_name_to_create', schema='analytics_ny') # write to a table in chunks of 1000 rows
+
 ```
 
 ## License
