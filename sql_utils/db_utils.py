@@ -52,11 +52,11 @@ def create_sql_connection():
 """
     This function takes a pandas dataframe and writes it to a SQL table in chunks
 """
-def df_to_sql_table(df, engine, table_name):
+def df_to_sql_table(df, engine, table_name, schema='analytics_ny'):
 
     # drop the table to start
     print(f'Dropping table {table_name}')
-    run_sql(f'DROP TABLE IF EXISTS analytics_ny.{table_name}', engine)
+    run_sql(f'DROP TABLE IF EXISTS  {schema}.{table_name}', engine)
     chunks = range(0, len(df), 1000)
 
     # split the data into chunks of 1000
@@ -66,7 +66,7 @@ def df_to_sql_table(df, engine, table_name):
         
         print(f'Appending chunk {int(i / 1000) + 1} of {len(chunks)}; indexes {start_index} to {min(end_index - 1, len(df) - 1)}')
         df_chunk = df[start_index:end_index]
-        df_chunk.to_sql(table_name, engine, schema='analytics_ny', if_exists='append', index=False, method='multi')
+        df_chunk.to_sql(table_name, engine, schema=schema, if_exists='append', index=False, method='multi')
 
 
 
