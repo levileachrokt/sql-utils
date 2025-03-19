@@ -14,7 +14,7 @@ dependencies = [
     "sqlalchemy",
     "trino",
 ]
-urls = { "Homepage" = "https://github.com/rokt/sql_utils" }
+urls = { "Homepage" = "https://github.com/levileachrokt/sql-utils" }
 
 [tool.setuptools]
 packages = find = {}
