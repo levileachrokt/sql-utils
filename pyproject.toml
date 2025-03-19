@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sql_utils"
+version = "0.1"
+description = "A collection of utilities for working with SQL databases"
+authors = [{ name = "Levi Leach", email = "levi.leach@rokt.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "pandas",
+    "sqlalchemy",
+    "trino",
+]
+urls = { "Homepage" = "https://github.com/rokt/sql_utils" }
+
+[tool.setuptools]
+packages = find = {}
+
+[tool.black]
+line-length = 88
+target-version = ["py37", "py38", "py39", "py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
